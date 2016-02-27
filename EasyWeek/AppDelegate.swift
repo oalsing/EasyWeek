@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -18,8 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBarItem : NSStatusItem = NSStatusItem()
     var menu: NSMenu = NSMenu()
     
+    let launcherAppIdentifier = "oscar.alsing.EasyWeekHelperApp"
+    
     override func awakeFromNib() {
-        
         statusBarItem = statusBar.statusItemWithLength(-1)
         statusBarItem.menu = menu
         updateStatusBarItemTitle()
@@ -39,6 +41,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        
+        var startedAtLogin = false
+        for app in NSWorkspace.sharedWorkspace().runningApplications {
+            if app.bundleIdentifier == launcherAppIdentifier {
+                startedAtLogin = true
+            }
+        }
+        
+        if startedAtLogin {
+            NSDistributedNotificationCenter.defaultCenter().postNotificationName("killme", object: NSBundle.mainBundle().bundleIdentifier!)
+            //			NSLog("i killed the launcher app!")
+        }
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -51,15 +65,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             loginCheckButton.state = 1
         }
+        
+        //you should move this next line to somewhere else this is for testing purposes only!!!
     }
+    
     func switchCheckButton(){
-        if(NSUserDefaults.standardUserDefaults().boolForKey("loginCheckButton") == false) {
+        var boolVal = false
+        
+        if(loginCheckButton.state == 1) {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "loginCheckButton")
+            boolVal = true
         } else {
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "loginCheckButton")
         }
+        
         NSUserDefaults.standardUserDefaults().synchronize()
+        
+        SMLoginItemSetEnabled(launcherAppIdentifier, boolVal)
+        
     }
+    
     @IBAction func closeWindow(sender: AnyObject) {
         window.close()
     }

@@ -7,12 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307B5FA41C7CEEA300D398C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B5FA31C7CEEA300D398C8 /* AppDelegate.swift */; };
+		307B5FA81C7CEEA300D398C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307B5FA71C7CEEA300D398C8 /* Assets.xcassets */; };
+		307B5FAB1C7CEEA300D398C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 307B5FA91C7CEEA300D398C8 /* Main.storyboard */; };
+		307B5FB31C7CF04C00D398C8 /* EasyWeekHelperApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 307B5FA11C7CEEA300D398C8 /* EasyWeekHelperApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		307B5FB51C7CF0AC00D398C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B5FB41C7CF0AC00D398C8 /* Cocoa.framework */; };
+		307B5FB71C7CF0B500D398C8 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307B5FB61C7CF0B500D398C8 /* ServiceManagement.framework */; };
 		30AAE7381C7CD92E00487ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AAE7371C7CD92E00487ECF /* AppDelegate.swift */; };
 		30AAE73A1C7CD92E00487ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE7391C7CD92E00487ECF /* Assets.xcassets */; };
 		30AAE73D1C7CD92E00487ECF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AAE73B1C7CD92E00487ECF /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		307B5FB21C7CF02C00D398C8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				307B5FB31C7CF04C00D398C8 /* EasyWeekHelperApp.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		307B5FA11C7CEEA300D398C8 /* EasyWeekHelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyWeekHelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		307B5FA31C7CEEA300D398C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		307B5FA71C7CEEA300D398C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		307B5FAA1C7CEEA300D398C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		307B5FAC1C7CEEA300D398C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307B5FB01C7CEFA800D398C8 /* EasyWeek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EasyWeek.entitlements; sourceTree = "<group>"; };
+		307B5FB11C7CEFAB00D398C8 /* EasyWeekHelperApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EasyWeekHelperApp.entitlements; sourceTree = "<group>"; };
+		307B5FB41C7CF0AC00D398C8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		307B5FB61C7CF0B500D398C8 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		30AAE7341C7CD92E00487ECF /* EasyWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AAE7371C7CD92E00487ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30AAE7391C7CD92E00487ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -21,20 +49,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		30AAE7311C7CD92E00487ECF /* Frameworks */ = {
+		307B5F9E1C7CEEA300D398C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30AAE7311C7CD92E00487ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307B5FB71C7CF0B500D398C8 /* ServiceManagement.framework in Frameworks */,
+				307B5FB51C7CF0AC00D398C8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		307B5FA21C7CEEA300D398C8 /* EasyWeekHelperApp */ = {
+			isa = PBXGroup;
+			children = (
+				307B5FB11C7CEFAB00D398C8 /* EasyWeekHelperApp.entitlements */,
+				307B5FA31C7CEEA300D398C8 /* AppDelegate.swift */,
+				307B5FA71C7CEEA300D398C8 /* Assets.xcassets */,
+				307B5FA91C7CEEA300D398C8 /* Main.storyboard */,
+				307B5FAC1C7CEEA300D398C8 /* Info.plist */,
+			);
+			path = EasyWeekHelperApp;
+			sourceTree = "<group>";
+		};
 		30AAE72B1C7CD92E00487ECF = {
 			isa = PBXGroup;
 			children = (
+				307B5FB61C7CF0B500D398C8 /* ServiceManagement.framework */,
+				307B5FB41C7CF0AC00D398C8 /* Cocoa.framework */,
 				30AAE7361C7CD92E00487ECF /* EasyWeek */,
+				307B5FA21C7CEEA300D398C8 /* EasyWeekHelperApp */,
 				30AAE7351C7CD92E00487ECF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				30AAE7341C7CD92E00487ECF /* EasyWeek.app */,
+				307B5FA11C7CEEA300D398C8 /* EasyWeekHelperApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +103,7 @@
 		30AAE7361C7CD92E00487ECF /* EasyWeek */ = {
 			isa = PBXGroup;
 			children = (
+				307B5FB01C7CEFA800D398C8 /* EasyWeek.entitlements */,
 				30AAE7371C7CD92E00487ECF /* AppDelegate.swift */,
 				30AAE7391C7CD92E00487ECF /* Assets.xcassets */,
 				30AAE73B1C7CD92E00487ECF /* MainMenu.xib */,
@@ -61,6 +115,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		307B5FA01C7CEEA300D398C8 /* EasyWeekHelperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 307B5FAF1C7CEEA300D398C8 /* Build configuration list for PBXNativeTarget "EasyWeekHelperApp" */;
+			buildPhases = (
+				307B5F9D1C7CEEA300D398C8 /* Sources */,
+				307B5F9E1C7CEEA300D398C8 /* Frameworks */,
+				307B5F9F1C7CEEA300D398C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyWeekHelperApp;
+			productName = EasyWeekHelperApp;
+			productReference = 307B5FA11C7CEEA300D398C8 /* EasyWeekHelperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		30AAE7331C7CD92E00487ECF /* EasyWeek */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30AAE7411C7CD92E00487ECF /* Build configuration list for PBXNativeTarget "EasyWeek" */;
@@ -68,6 +139,7 @@
 				30AAE7301C7CD92E00487ECF /* Sources */,
 				30AAE7311C7CD92E00487ECF /* Frameworks */,
 				30AAE7321C7CD92E00487ECF /* Resources */,
+				307B5FB21C7CF02C00D398C8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -88,8 +160,23 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Oscar Alsing";
 				TargetAttributes = {
+					307B5FA01C7CEEA300D398C8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = VZ87GY23K5;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					30AAE7331C7CD92E00487ECF = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = VZ87GY23K5;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -107,11 +194,21 @@
 			projectRoot = "";
 			targets = (
 				30AAE7331C7CD92E00487ECF /* EasyWeek */,
+				307B5FA01C7CEEA300D398C8 /* EasyWeekHelperApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		307B5F9F1C7CEEA300D398C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307B5FA81C7CEEA300D398C8 /* Assets.xcassets in Resources */,
+				307B5FAB1C7CEEA300D398C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30AAE7321C7CD92E00487ECF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +221,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		307B5F9D1C7CEEA300D398C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307B5FA41C7CEEA300D398C8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30AAE7301C7CD92E00487ECF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +240,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		307B5FA91C7CEEA300D398C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				307B5FAA1C7CEEA300D398C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		30AAE73B1C7CD92E00487ECF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -146,6 +259,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		307B5FAD1C7CEEA300D398C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyWeekHelperApp/EasyWeekHelperApp.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyWeekHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oscar.alsing.EasyWeekHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		307B5FAE1C7CEEA300D398C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyWeekHelperApp/EasyWeekHelperApp.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EasyWeekHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oscar.alsing.EasyWeekHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		30AAE73F1C7CD92E00487ECF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -230,6 +373,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyWeek/EasyWeek.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = EasyWeek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -242,6 +387,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyWeek/EasyWeek.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = EasyWeek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -253,6 +400,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		307B5FAF1C7CEEA300D398C8 /* Build configuration list for PBXNativeTarget "EasyWeekHelperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				307B5FAD1C7CEEA300D398C8 /* Debug */,
+				307B5FAE1C7CEEA300D398C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30AAE72F1C7CD92E00487ECF /* Build configuration list for PBXProject "EasyWeek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -269,6 +425,7 @@
 				30AAE7431C7CD92E00487ECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
