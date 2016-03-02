@@ -16,6 +16,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="EasyWeek" customModuleProvider="target">
             <connections>
                 <outlet property="loginCheckButton" destination="88Z-Gf-I4n" id="PMp-3f-U5K"/>
+                <outlet property="weekPrefixTextField" destination="AuJ-14-CY6" id="moS-jh-MZS"/>
                 <outlet property="window" destination="Wt1-3C-s9r" id="eDm-fS-zye"/>
             </connections>
         </customObject>
@@ -65,13 +66,37 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AuJ-14-CY6">
+                        <rect key="frame" x="20" y="42" width="96" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="xCh-wd-yXf"/>
+                            <constraint firstAttribute="height" constant="22" id="ymD-8w-iqm"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Week" placeholderString="Week" drawsBackground="YES" id="PlX-oQ-cfQ">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7pJ-oj-ze7">
+                        <rect key="frame" x="122" y="45" width="126" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Week number prefix" id="v56-bT-CLg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="88Z-Gf-I4n" firstAttribute="top" secondItem="7pJ-oj-ze7" secondAttribute="bottom" constant="11" id="1Sm-5F-Uam"/>
                     <constraint firstAttribute="bottom" secondItem="km7-SX-TFv" secondAttribute="bottom" constant="13" id="2xu-FX-JPt"/>
+                    <constraint firstItem="7pJ-oj-ze7" firstAttribute="leading" secondItem="AuJ-14-CY6" secondAttribute="trailing" constant="8" id="3Mk-Eo-8gL"/>
                     <constraint firstAttribute="trailing" secondItem="akA-QY-dXs" secondAttribute="trailing" constant="375" id="6ZQ-B6-750"/>
+                    <constraint firstItem="88Z-Gf-I4n" firstAttribute="top" secondItem="AuJ-14-CY6" secondAttribute="bottom" constant="8" id="CXv-ZN-bMB"/>
                     <constraint firstItem="2bv-T1-Na0" firstAttribute="top" secondItem="6vV-GV-dMg" secondAttribute="top" constant="20" id="Cc0-hg-oSP"/>
                     <constraint firstItem="88Z-Gf-I4n" firstAttribute="leading" secondItem="6vV-GV-dMg" secondAttribute="leading" constant="20" id="SjO-JM-HLP"/>
                     <constraint firstAttribute="trailing" secondItem="km7-SX-TFv" secondAttribute="trailing" constant="20" id="YPI-bl-w1o"/>
+                    <constraint firstItem="AuJ-14-CY6" firstAttribute="leading" secondItem="6vV-GV-dMg" secondAttribute="leading" constant="20" id="aX8-6b-O0N"/>
                     <constraint firstAttribute="trailing" secondItem="2bv-T1-Na0" secondAttribute="trailing" constant="20" id="mpa-ag-Jkl"/>
                     <constraint firstAttribute="bottom" secondItem="88Z-Gf-I4n" secondAttribute="bottom" constant="20" id="qbG-ju-VAO"/>
                     <constraint firstItem="2bv-T1-Na0" firstAttribute="leading" secondItem="akA-QY-dXs" secondAttribute="trailing" constant="8" id="rZE-xw-3Zk"/>

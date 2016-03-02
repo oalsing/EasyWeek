@@ -10,10 +10,11 @@ import Cocoa
 import ServiceManagement
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSTextFieldDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var loginCheckButton: NSButton!
+    @IBOutlet weak var weekPrefixTextField: NSTextField!
     
     var statusBar = NSStatusBar.systemStatusBar()
     var statusBarItem : NSStatusItem = NSStatusItem()
@@ -24,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     override func awakeFromNib() {
         statusBarItem = statusBar.statusItemWithLength(-1)
         statusBarItem.menu = menu
-        updateStatusBarItemTitle()
+        updateStatusBarItemTitle(nil)
         
         menu.addItemWithTitle("Preferences...", action: Selector("displayPreferences:"), keyEquivalent: "")
         menu.addItem(NSMenuItem.separatorItem())
@@ -36,6 +37,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
         let _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "updateStatusBarItemTitle", userInfo: nil, repeats: true)
+        
+        weekPrefixTextField.delegate = self
     }
     
 
@@ -52,6 +55,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if startedAtLogin {
             NSDistributedNotificationCenter.defaultCenter().postNotificationName("killme", object: NSBundle.mainBundle().bundleIdentifier!)
             //			NSLog("i killed the launcher app!")
+        }
+    }
+    
+    override func controlTextDidChange(obj: NSNotification) {
+        print("asd")
+        if let obj = obj.object as? NSTextField{
+            if(obj == weekPrefixTextField){
+                print(obj.stringValue)
+                updateStatusBarItemTitle(obj.stringValue)
+            }
         }
     }
 
@@ -103,8 +116,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return weekNumber
     }
     
-    func updateStatusBarItemTitle() {
-        statusBarItem.title = "Week \(getWeek())"
+    func updateStatusBarItemTitle(prefix:String?) {
+        if let prefix = prefix {
+            statusBarItem.title = "\(prefix) \(getWeek())"
+        } else {
+            statusBarItem.title = "Week \(getWeek())"
+        }
     }
 
 
